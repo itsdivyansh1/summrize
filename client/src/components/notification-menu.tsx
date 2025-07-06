@@ -61,13 +61,12 @@ export default function NotificationMenu() {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button
-          size="icon"
-          variant="ghost"
-          className="text-muted-foreground relative size-8 rounded-full shadow-none"
-          aria-label="Open notifications"
-        >
-          <BellIcon size={16} aria-hidden="true" />
+        <Button size="icon" variant="ghost" aria-label="Open notifications">
+          <BellIcon
+            size={16}
+            aria-hidden="true"
+            className="text-muted-foreground"
+          />
           {unreadCount > 0 && (
             <div
               aria-hidden="true"

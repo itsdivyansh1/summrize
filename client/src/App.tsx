@@ -6,6 +6,7 @@ import { SidebarRight } from "./components/sidebar/sidebar-right";
 import { ThemeProvider } from "./components/theme-provider";
 import { Button } from "./components/ui/button";
 import { SidebarInset, SidebarProvider } from "./components/ui/sidebar";
+import { Sparkles } from "lucide-react";
 
 const App = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -48,6 +49,7 @@ const App = () => {
               <div className="flex justify-end mt-2">
                 <Button onClick={handleSubmit} disabled={loading}>
                   {loading ? "Summarizing..." : "Summarize PDF"}
+                  <Sparkles />
                 </Button>
               </div>
             </div>

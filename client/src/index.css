@@ -117,4 +117,37 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-border); /* fully transparent track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-muted-foreground);
+    border-radius: 0px;
+    background-clip: padding-box;
+    border: none;
+  }
+
+  /* Dark mode */
+  html.dark ::-webkit-scrollbar-track {
+    background: var(--color-border);
+  }
+
+  html.dark ::-webkit-scrollbar-thumb {
+    /* background-color: rgba(200, 200, 200, 0.25); */
+    background-color: var(--color-muted-foreground);
+  }
+
+  /* Browsers without `::-webkit-scrollbar-*` support */
+  @supports not selector(::-webkit-scrollbar) {
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: var(--color-foreground) var(--color-border);
+    }
+  }
 }

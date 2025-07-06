@@ -15,7 +15,7 @@ import {
   Trash2,
 } from "lucide-react";
 
-import { NavFavorites } from "@/components/sidebar/nav-favorites";
+import { NavChats } from "@/components/sidebar/nav-chats";
 import { NavMain } from "@/components/sidebar/nav-main";
 import {
   Sidebar,
@@ -95,56 +95,46 @@ const data = {
       icon: MessageCircleQuestion,
     },
   ],
-  favorites: [
+  chats: [
     {
       name: "Project Management & Task Tracking",
       url: "#",
-      emoji: "📊",
     },
     {
       name: "Family Recipe Collection & Meal Planning",
       url: "#",
-      emoji: "🍳",
     },
     {
       name: "Fitness Tracker & Workout Routines",
       url: "#",
-      emoji: "💪",
     },
     {
       name: "Book Notes & Reading List",
       url: "#",
-      emoji: "📚",
     },
     {
       name: "Sustainable Gardening Tips & Plant Care",
       url: "#",
-      emoji: "🌱",
     },
     {
       name: "Language Learning Progress & Resources",
       url: "#",
-      emoji: "🗣️",
     },
     {
       name: "Home Renovation Ideas & Budget Tracker",
       url: "#",
-      emoji: "🏠",
     },
     {
       name: "Personal Finance & Investment Portfolio",
       url: "#",
-      emoji: "💰",
     },
     {
       name: "Movie & TV Show Watchlist with Reviews",
       url: "#",
-      emoji: "🎬",
     },
     {
       name: "Daily Habit Tracker & Goal Setting",
       url: "#",
-      emoji: "✅",
     },
   ],
 };
@@ -162,7 +152,7 @@ export function SidebarLeft({
         <NavMain items={data.navMain} />
       </SidebarHeader>
       <SidebarContent>
-        <NavFavorites favorites={data.favorites} />
+        <NavChats favorites={data.chats} />
       </SidebarContent>
       <SidebarRail />
     </Sidebar>
