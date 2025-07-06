@@ -1,8 +1,8 @@
 import { useState } from "react";
 import FileUpload from "./components/file-upload";
 import Navbar from "./components/navbar";
-import { SidebarLeft } from "./components/sidebar-left";
-import { SidebarRight } from "./components/sidebar-right";
+import { SidebarLeft } from "./components/sidebar/sidebar-left";
+import { SidebarRight } from "./components/sidebar/sidebar-right";
 import { ThemeProvider } from "./components/theme-provider";
 import { Button } from "./components/ui/button";
 import { SidebarInset, SidebarProvider } from "./components/ui/sidebar";
